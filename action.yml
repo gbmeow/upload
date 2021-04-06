@@ -1,0 +1,17 @@
+name: Checkity Upload
+author: checkity.io
+description: Uploads code coverage reports to [checkity.io](https://checkity.io)
+runs:
+  using: docker
+  image: docker://public.ecr.aws/q2x7s9d6/checkity-upload:v1
+inputs:
+  coverage-report-paths:
+    default: '**/jacoco.xml'
+    description: Comma separated list of coverage report paths, supports globs.
+    required: true
+  repo-token:
+    description: The GitHub token used to validate repository access when uploading coverage reports.
+    required: true
+outputs:
+  id:
+    description: A unique identifier for the uploaded coverage reports.
