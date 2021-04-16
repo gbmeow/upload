@@ -1,6 +1,6 @@
 # Checkity.io upload action
 
-This action uploads code coverage reports to [checkity.io](https://checkity.io).
+This action uploads code coverage reports to [checkity.io](https://checkity.io), see it in action in our [upload-example](https://github.com/checkity/upload-example) repository.
 
 ## Usage
 
