@@ -1,6 +1,9 @@
 name: Checkity Upload
 author: checkity.io
 description: Uploads code coverage reports to [checkity.io](https://checkity.io)
+branding:
+  color: blue
+  icon: check-square
 runs:
   using: docker
   image: docker://public.ecr.aws/q2x7s9d6/checkity-upload:v1
