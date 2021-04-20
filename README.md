@@ -4,6 +4,8 @@ This action uploads code coverage reports to [checkity.io](https://checkity.io),
 
 ## Usage
 
+See [action.yml](action.yml).
+
 ```yaml
 - uses: checkity/upload@v1
   with:

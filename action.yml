@@ -8,10 +8,33 @@ runs:
   using: docker
   image: docker://public.ecr.aws/q2x7s9d6/checkity-upload:v1
 inputs:
+  coverage-badge-label:
+    default: checkity.io
+    description: |
+      Label to use for the generated coverage badge.
+      Defaults to `checkity.io` and cannot be changed for public repositories.
+      Must match regex `[a-zA-Z0-9._-]{1,20}`.
+    required: false
+  coverage-badge-token:
+    default: ''
+    description: |
+      Token to use for the generated coverage badge, if not specified a badge is not generated.
+      Defaults to ``.
+      The generated badge will be available at https://badge.checkity.io/<owner>/<repo>/<token>.svg
+      Must match regex `[a-zA-Z0-9_-]{1,20}`.
+    required: false
   coverage-report-paths:
     default: '**/jacoco.xml'
     description: Comma separated list of coverage report paths, supports globs.
     required: true
+  coverage-target-diff:
+    default: '0.5'
+    description: Target diff coverage, must be between 0 and 1 inclusive.
+    required: false
+  coverage-target-overall:
+    default: '0.5'
+    description: Target overall coverage, must be between 0 and 1 inclusive.
+    required: false
   repo-token:
     description: The GitHub token used to validate repository access when uploading coverage reports.
     required: true
