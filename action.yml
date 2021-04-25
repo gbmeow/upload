@@ -6,7 +6,7 @@ branding:
   icon: check-square
 runs:
   using: docker
-  image: docker://public.ecr.aws/q2x7s9d6/checkity-upload:v1
+  image: docker://checkity/upload:v1
 inputs:
   coverage-badge-label:
     default: checkity.io
